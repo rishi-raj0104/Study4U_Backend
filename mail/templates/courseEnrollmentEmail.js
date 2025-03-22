@@ -67,7 +67,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
     
     <body>
         <div class="container">
-            <a href="http://localhost:5173/"><img class="logo" src="https://ibb.co/5hmmqwxQ"
+            <a href="https://study4-u.vercel.app/"><img class="logo" src="https://ibb.co/5hmmqwxQ"
                     alt="Study4ULogo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">

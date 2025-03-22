@@ -28,7 +28,11 @@ app.use(cookieParser());
 // );
 app.use(
     cors({
+<<<<<<< HEAD
         origin: ["https://study4-u.vercel.app","http://localhost:3000", "http://localhost:5173"],
+=======
+        origin: ["https://study4-u.vercel.app/","http://localhost:3000", "http://localhost:5173"],
+>>>>>>> 07bea58c0e2236a63864d74abbc9d70f3b211395
         credentials: true,
     })
 );

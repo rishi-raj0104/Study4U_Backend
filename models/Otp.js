@@ -25,7 +25,7 @@ async function sendVerificationEmail(email ,otp){
             "Verification Email",
             emailTemplate(otp)
         );
-        console.log("Email sent successfully: ", mailResponse.response);
+        //console.log("Email sent successfully: ", mailResponse.response);
         //console.log('Email Send Sucessfully',mailResponse);
     }
     catch(error){
@@ -34,8 +34,16 @@ async function sendVerificationEmail(email ,otp){
     }
 }
 
-OtpSchema.pre('save', async function(next){
-    await sendVerificationEmail(this.email,this.otp);
+// OtpSchema.pre('save', async function(next){
+//     await sendVerificationEmail(this.email,this.otp);
+//     next();
+// })
+OtpSchema.pre('save', async function(next) {
+    try {
+        await sendVerificationEmail(this.email, this.otp);
+    } catch (error) {
+        console.log("Error sending email, but proceeding with save:", error);
+    }
     next();
-})
+});
 module.exports = mongoose.model("Otp",OtpSchema);

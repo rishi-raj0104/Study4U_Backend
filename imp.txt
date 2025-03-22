@@ -1,0 +1,19 @@
+npm init -y
+npm i express
+npm i nodemon
+npm i env
+npm i mongoose
+npm i cookie-parser
+npm i jsonwebtoken
+npm i nodemailer
+npm i otp-generator
+npm i bcrypt
+
+
+npm i bcryptjs  
+npm i cors  
+npm i crypto-random-string  
+npm i dotenv  
+npm i express-fileupload  
+npm i node-schedule  
+npm i razorpay  
